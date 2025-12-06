@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL.WADI - اتصل بنا</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">EL.WADI</div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="products.html"><i class="fas fa-box-open"></i> المنتجات</a></li>
+                    <li><a href="contact_us.html" class="active"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                    </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <div class="container">
+                <h1>تواصل معنا وطلب التوريد</h1>
+                <p>نحن جاهزون للرد على استفساراتكم وتلقي طلباتكم بالجملة.</p>
+            </div>
+        </section>
+
+        <section class="form-section" id="invoice-request">
+            <div class="container">
+                <h2>طلب فاتورة/عرض سعر</h2>
+                <p>يرجى ملء البيانات التالية بدقة لإنشاء فاتورة مبدئية سيتم إرسالها إليك عبر الإيميل للتأكيد.</p>
+
+                <form action="#" method="POST" id="invoice-form">
+                    
+                    <div class="form-group">
+                        <label for="company_name">اسم العميل/الشركة (مطلوب)</label>
+                        <input type="text" id="company_name" name="company_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp_number">رقم التواصل (الواتساب) (مطلوب)</label>
+                        <input type="tel" id="whatsapp_number" name="whatsapp_number" required pattern="[0-9]+">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني (مطلوب)</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shipping_address">عنوان الشحن/التوريد (مطلوب)</label>
+                        <textarea id="shipping_address" name="shipping_address" rows="3" required></textarea>
+                    </div>
+
+                    <h3>تحديد المنتجات المطلوبة</h3>
+                    <p>المنتج الأول إلزامي، ويمكنك إضافة ما يصل إلى 4 منتجات إضافية.</p>
+
+                    <div class="product-input-group">
+                        <h4>المنتج الأول (إلزامي)</h4>
+                        <div class="form-row">
+                            <div class="form-group half-width">
+                                <label for="product_1">اسم المنتج</label>
+                                <select id="product_1" name="product_1" required>
+                                    <option value="" disabled selected>--- اختر المنتج ---</option>
+                                    <option value="شوكولاته">شوكولاته</option>
+                                    <option value="شيكوبون">شيكوبون</option>
+                                    <option value="فول سوداني ريو">فول سوداني ريو</option>
+                                    <option value="لبناني الوادي">لبناني الوادي</option>
+                                    <option value="ملبس الوادي">ملبس الوادي</option>
+                                    <option value="لب عباد الشمس">لب عباد الشمس</option>
+                                    <option value="لب سوبر">لب سوبر</option>
+                                    <option value="لب كوسه">لب كوسه</option>
+                                    <option value="تقاوي لب عباد الشمس">تقاوي لب عباد الشمس</option>
+                                </select>
+                            </div>
+                            <div class="form-group half-width">
+                                <label for="quantity_1">الكمية المطلوبة (بالوحدة)</label>
+                                <input type="number" id="quantity_1" name="quantity_1" required min="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-input-group optional">
+                        <h4>المنتج الثاني (اختياري)</h4>
+                        <div class="form-row">
+                            <div class="form-group half-width">
+                                <label for="product_2">اسم المنتج</label>
+                                <select id="product_2" name="product_2">
+                                    <option value="" selected>--- اختر المنتج (اختياري) ---</option>
+                                    <option value="شوكولاته">شوكولاته</option>
+                                    <option value="شيكوبون">شيكوبون</option>
+                                    <option value="فول سوداني ريو">فول سوداني ريو</option>
+                                    <option value="لبناني الوادي">لبناني الوادي</option>
+                                    <option value="ملبس الوادي">ملبس الوادي</option>
+                                    <option value="لب عباد الشمس">لب عباد الشمس</option>
+                                    <option value="لب سوبر">لب سوبر</option>
+                                    <option value="لب كوسه">لب كوسه</option>
+                                    <option value="تقاوي لب عباد الشمس">تقاوي لب عباد الشمس</option>
+                                </select>
+                            </div>
+                            <div class="form-group half-width">
+                                <label for="quantity_2">الكمية المطلوبة (بالوحدة)</label>
+                                <input type="number" id="quantity_2" name="quantity_2" min="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-input-group optional">
+                        <h4>المنتج الثالث (اختياري)</h4>
+                        <div class="form-row">
+                            <div class="form-group half-width">
+                                <label for="product_3">اسم المنتج</label>
+                                <select id="product_3" name="product_3">
+                                    <option value="" selected>--- اختر المنتج (اختياري) ---</option>
+                                    <option value="شوكولاته">شوكولاته</option>
+                                    <option value="شيكوبون">شيكوبون</option>
+                                    <option value="فول سوداني ريو">فول سوداني ريو</option>
+                                    <option value="لبناني الوادي">لبناني الوادي</option>
+                                    <option value="ملبس الوادي">ملبس الوادي</option>
+                                    <option value="لب عباد الشمس">لب عباد الشمس</option>
+                                    <option value="لب سوبر">لب سوبر</option>
+                                    <option value="لب كوسه">لب كوسه</option>
+                                    <option value="تقاوي لب عباد الشمس">تقاوي لب عباد الشمس</option>
+                                </select>
+                            </div>
+                            <div class="form-group half-width">
+                                <label for="quantity_3">الكمية المطلوبة (بالوحدة)</label>
+                                <input type="number" id="quantity_3" name="quantity_3" min="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-input-group optional">
+                        <h4>المنتج الرابع (اختياري)</h4>
+                        <div class="form-row">
+                            <div class="form-group half-width">
+                                <label for="product_4">اسم المنتج</label>
+                                <select id="product_4" name="product_4">
+                                    <option value="" selected>--- اختر المنتج (اختياري) ---</option>
+                                    <option value="شوكولاته">شوكولاته</option>
+                                    <option value="شيكوبون">شيكوبون</option>
+                                    <option value="فول سوداني ريو">فول سوداني ريو</option>
+                                    <option value="لبناني الوادي">لبناني الوادي</option>
+                                    <option value="ملبس الوادي">ملبس الوادي</option>
+                                    <option value="لب عباد الشمس">لب عباد الشمس</option>
+                                    <option value="لب سوبر">لب سوبر</option>
+                                    <option value="لب كوسه">لب كوسه</option>
+                                    <option value="تقاوي لب عباد الشمس">تقاوي لب عباد الشمس</option>
+                                </select>
+                            </div>
+                            <div class="form-group half-width">
+                                <label for="quantity_4">الكمية المطلوبة (بالوحدة)</label>
+                                <input type="number" id="quantity_4" name="quantity_4" min="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-input-group optional">
+                        <h4>المنتج الخامس (اختياري)</h4>
+                        <div class="form-row">
+                            <div class="form-group half-width">
+                                <label for="product_5">اسم المنتج</label>
+                                <select id="product_5" name="product_5">
+                                    <option value="" selected>--- اختر المنتج (اختياري) ---</option>
+                                    <option value="شوكولاته">شوكولاته</option>
+                                    <option value="شيكوبون">شيكوبون</option>
+                                    <option value="فول سوداني ريو">فول سوداني ريو</option>
+                                    <option value="لبناني الوادي">لبناني الوادي</option>
+                                    <option value="ملبس الوادي">ملبس الوادي</option>
+                                    <option value="لب عباد الشمس">لب عباد الشمس</option>
+                                    <option value="لب سوبر">لب سوبر</option>
+                                    <option value="لب كوسه">لب كوسه</option>
+                                    <option value="تقاوي لب عباد الشمس">تقاوي لب عباد الشمس</option>
+                                </select>
+                            </div>
+                            <div class="form-group half-width">
+                                <label for="quantity_5">الكمية المطلوبة (بالوحدة)</label>
+                                <input type="number" id="quantity_5" name="quantity_5" min="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn"><i class="fas fa-file-invoice"></i> طلب الفاتورة الآن</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="contact-details-section">
+            <div class="container">
+                <div class="contact-details-side">
+                    <h4>بيانات الاتصال المباشر</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>هاتف المبيعات: 01229395435</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>الإيميل الرسمي: medorahom78@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>العنوان: التجارة - أبو حمص - بلقطر الشرقية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <h4>اتصل بنا</h4>
+                <p><i class="fas fa-phone-alt"></i> هاتف المبيعات: 01229395435</p>
+                <p><i class="fas fa-envelope"></i> الإيميل الرسمي: medorahom78@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> العنوان: التجارة - أبو حمص - بلقطر الشرقية</p>
+            </div>
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="products.html">المنتجات</a></li>
+                    <li><a href="contact_us.html">طلب فاتورة/عرض سعر</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>&copy; 2024 EL.WADI - جميع الحقوق محفوظة لمجموعة عبد الونيس للتوريد.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
